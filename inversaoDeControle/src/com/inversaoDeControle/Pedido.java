@@ -1,4 +1,4 @@
-package com.inveversaoDeControle;
+package com.inversaoDeControle;
 
 public class Pedido {
 
@@ -9,10 +9,9 @@ public class Pedido {
 
 	}
 	
-	private EnviarEmails enviar;
+	private EnviarEmails enviar = EnviarEmails.obterDadosEmail();
 	
 	public void gravar() {
-		this.enviar = new EnviarEmails("stmp", "contato@email.com", "senha");
 		this.enviar.retornar("Pedido criado!");
 	}
 
