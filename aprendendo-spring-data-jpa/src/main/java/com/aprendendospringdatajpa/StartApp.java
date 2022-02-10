@@ -12,10 +12,12 @@ public class StartApp implements CommandLineRunner{
 
 	@Autowired
 	private UserRepository repository;
+	@Autowired
+	private User user;
 	
 	@Override
 	public void run(String... args) throws Exception {
-		User user = new User();
+		
 		user.setName("Carlos");
 		user.setUsername("caducarlos");
 		user.setPassword("aaaa1111");
